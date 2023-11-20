@@ -4,4 +4,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="comenzar">Comenzar</string>
     <string name="combate_pokemon">Combate\nPokemon</string>
+    <string name="valoresPokemon">0-999</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="pokemon_1">Pokemon 1</string>
+    <string name="ataque_del_pokemon">Ataque del Pokemon</string>
+    <string name="defensa_especial_del_pokemon">Defensa Especial del Pokemon</string>
+    <string name="defensa_del_pokemon">Defensa del Pokemon</string>
+    <string name="vida_del_pokemon">Vida del Pokemon</string>
+    <string name="ataque_especial_del_pokemon">Ataque Especial del Pokemon</string>
 </resources>

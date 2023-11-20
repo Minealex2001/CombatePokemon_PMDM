@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrainLayoutPokemon1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pokemon2">
+    tools:context=".pokemon2.pokemon2Model">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tituloPagina1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coda"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/pokemon_1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <EditText
+        android:id="@+id/vidaPokemonINPUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:fontFamily="@font/coda"
+        android:inputType="text"
+        android:text="@string/valoresPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/defensaPokemonInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/coda"
+        android:inputType="text"
+        android:text="@string/valoresPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defensaPokemon" />
+
+    <EditText
+        android:id="@+id/defensaEspecialPokemonInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/coda"
+        android:inputType="text"
+        android:text="@string/valoresPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defensaEspecialPokemon" />
+
+    <TextView
+        android:id="@+id/ataqueEspecialPokemon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/ataque_especial_del_pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defensaPokemonInput" />
+
+    <EditText
+        android:id="@+id/ataqueEspecialInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/coda"
+        android:inputType="text"
+        android:text="@string/valoresPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ataqueEspecialPokemon1" />
+
+    <TextView
+        android:id="@+id/VidaPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/vida_del_pokemon"
+        app:layout_constraintBottom_toTopOf="@+id/vidaPokemonINPUT"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/defensaPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/defensa_del_pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ataquePokemonInput" />
+
+    <TextView
+        android:id="@+id/defensaEspecialPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/defensa_especial_del_pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ataqueEspecialInput" />
+
+    <EditText
+        android:id="@+id/ataquePokemonInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/coda"
+        android:inputType="text"
+        android:text="@string/valoresPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ataquePokemon" />
+
+    <TextView
+        android:id="@+id/ataquePokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/ataque_del_pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidaPokemonINPUT" />
+
+
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coda"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/siguiente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defensaEspecialPokemonInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

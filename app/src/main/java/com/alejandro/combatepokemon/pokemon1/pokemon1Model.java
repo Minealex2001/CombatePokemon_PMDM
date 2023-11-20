@@ -1,4 +1,4 @@
-package com.alejandro.combatepokemon;
+package com.alejandro.combatepokemon.pokemon1;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alejandro.combatepokemon.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link pokemon2#newInstance} factory method to
+ * Use the {@link pokemon1Model#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class pokemon2 extends Fragment {
+public class pokemon1Model extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class pokemon2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public pokemon2() {
+    public pokemon1Model() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class pokemon2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment pokemon2.
+     * @return A new instance of fragment pokemon1.
      */
     // TODO: Rename and change types and number of parameters
-    public static pokemon2 newInstance(String param1, String param2) {
-        pokemon2 fragment = new pokemon2();
+    public static pokemon1Model newInstance(String param1, String param2) {
+        pokemon1Model fragment = new pokemon1Model();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class pokemon2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokemon2, container, false);
+        return inflater.inflate(R.layout.fragment_pokemon1, container, false);
     }
 }
