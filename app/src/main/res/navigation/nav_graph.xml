@@ -11,30 +11,18 @@
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_inicio_to_pokemon1"
-            app:destination="@id/pokemon1" />
+            android:id="@+id/action_inicio_to_pokemon1View"
+            app:destination="@id/pokemon1View" />
     </fragment>
-    <fragment
-        android:id="@+id/pokemon1"
-        android:name="com.alejandro.combatepokemon.pokemon1.pokemon1Model"
+    <activity
+        android:id="@+id/pokemon1View"
+        android:name="com.alejandro.combatepokemon.pokemon1.pokemon1View"
         android:label="fragment_pokemon1"
-        tools:layout="@layout/fragment_pokemon1" >
-        <action
-            android:id="@+id/action_pokemon1_to_pokemon22"
-            app:destination="@id/pokemon2" />
-    </fragment>
-    <fragment
-        android:id="@+id/pokemon2"
-        android:name="com.alejandro.combatepokemon.pokemon2.pokemon2Model"
+        tools:layout="@layout/fragment_pokemon1" />
+
+    <activity
+        android:id="@+id/pokemon2View"
+        android:name="com.alejandro.combatepokemon.pokemon1.pokemon1View"
         android:label="fragment_pokemon2"
-        tools:layout="@layout/fragment_pokemon2" >
-        <action
-            android:id="@+id/action_pokemon2_to_combate"
-            app:destination="@id/combate" />
-    </fragment>
-    <fragment
-        android:id="@+id/combate"
-        android:name="com.alejandro.combatepokemon.combate"
-        android:label="fragment_combate"
-        tools:layout="@layout/fragment_combate" />
+        tools:layout="@layout/fragment_pokemon2" />
 </navigation>

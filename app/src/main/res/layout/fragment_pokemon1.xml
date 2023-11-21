@@ -5,10 +5,10 @@
     android:id="@+id/constrainLayoutPokemon2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pokemon1.pokemon1Model">
+    tools:context=".pokemon1.pokemon1View">
 
     <EditText
-        android:id="@+id/vidaPokemonINPUT"
+        android:id="@+id/vidaPokemonInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/defensaPokemonInput" />
 
     <EditText
-        android:id="@+id/ataqueEspecialInput"
+        android:id="@+id/ataqueEspecialPokemonInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -85,7 +85,7 @@
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/coda"
         android:text="@string/vida_del_pokemon"
-        app:layout_constraintBottom_toTopOf="@+id/vidaPokemonINPUT"
+        app:layout_constraintBottom_toTopOf="@+id/vidaPokemonInput"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -131,7 +131,7 @@
         android:fontFamily="@font/coda"
         android:text="@string/ataque_del_pokemon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vidaPokemonINPUT" />
+        app:layout_constraintTop_toBottomOf="@+id/vidaPokemonInput" />
 
     <TextView
         android:id="@+id/tituloPagina2"
