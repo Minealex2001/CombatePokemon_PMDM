@@ -10,19 +10,16 @@
         android:name="com.alejandro.combatepokemon.Inicio"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
-        <action
-            android:id="@+id/action_inicio_to_pokemon1View"
-            app:destination="@id/pokemon1View" />
     </fragment>
-    <activity
-        android:id="@+id/pokemon1View"
-        android:name="com.alejandro.combatepokemon.pokemon1.pokemon1View"
-        android:label="fragment_pokemon1"
-        tools:layout="@layout/fragment_pokemon1" />
+    <fragment
+        android:id="@+id/combate"
+        android:name="com.alejandro.combatepokemon.combate"
+        android:label="fragment_combate"
+        tools:layout="@layout/fragment_combate" />
+    <fragment
+        android:id="@+id/pokemonView"
+        android:name="com.alejandro.combatepokemon.pokemon.PokemonView"
+        android:label="fragment_agregarpokemon"
+        tools:layout="@layout/fragment_agregarpokemon" />
 
-    <activity
-        android:id="@+id/pokemon2View"
-        android:name="com.alejandro.combatepokemon.pokemon1.pokemon1View"
-        android:label="fragment_pokemon2"
-        tools:layout="@layout/fragment_pokemon2" />
 </navigation>

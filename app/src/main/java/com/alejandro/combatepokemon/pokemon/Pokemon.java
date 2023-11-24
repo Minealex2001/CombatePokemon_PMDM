@@ -1,4 +1,4 @@
-package com.alejandro.combatepokemon.entities;
+package com.alejandro.combatepokemon.pokemon;
 
 public class Pokemon {
     String nombrePokemon;

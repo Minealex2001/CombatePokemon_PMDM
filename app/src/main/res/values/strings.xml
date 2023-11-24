@@ -12,4 +12,5 @@
     <string name="defensa_del_pokemon">Defensa del Pokemon</string>
     <string name="vida_del_pokemon">Vida del Pokemon</string>
     <string name="ataque_especial_del_pokemon">Ataque Especial del Pokemon</string>
+    <string name="agregar_pokemon">Agregar Pokemon</string>
 </resources>

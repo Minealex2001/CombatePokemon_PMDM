@@ -1,10 +1,10 @@
-package com.alejandro.combatepokemon.pokemon1;
+package com.alejandro.combatepokemon.pokemon;
 
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class Pokemon1ViewModel extends ViewModel {
+public class PokemonViewModel extends ViewModel {
 
     MutableLiveData<String> nombrePokemon;
     MutableLiveData<Integer> vidaPokemon;
@@ -18,7 +18,7 @@ public class Pokemon1ViewModel extends ViewModel {
     int ataquesEspecialesMaximoPokemon = 999;
     int defensaEspecialesMaximoPokemon = 999;
     int minimoPokemon = 0;
-    public Pokemon1ViewModel() {
+    public PokemonViewModel() {
         nombrePokemon = new MutableLiveData<>();
         vidaPokemon = new MutableLiveData<>();
         ataquePokemon = new MutableLiveData<>();
