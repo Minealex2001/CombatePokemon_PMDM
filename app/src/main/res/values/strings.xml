@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CombatePokemon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar_pokemon">Agregar Pokemon</string>
+    <string name="comenzar_combate">Comenzar Combate</string>
+    <string name="combate_pokemon">COMBATE\nPOKEMON</string>
+    <string name="valoresPokemon">0-999</string>
+    <string name="agregarPokemon">Agregar Pokemon</string>
+    <string name="ataque_del_pokemon">0-999</string>
+    <string name="defensa_especial_del_pokemon">0-999</string>
+    <string name="defensa_del_pokemon">0-999</string>
+    <string name="vida_del_pokemon">0-999</string>
+    <string name="ataque_especial_del_pokemon">0-999</string>
+</resources>

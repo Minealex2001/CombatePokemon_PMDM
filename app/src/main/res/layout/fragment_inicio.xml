@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrainInicio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio" >
+
+    <TextView
+        android:id="@+id/agregarPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/coda"
+        android:gravity="center"
+        android:text="@string/combate_pokemon"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/comenzarCombate"
+        android:layout_width="130dp"
+        android:layout_height="74dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/comenzar_combate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agregarPokemon"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="162dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/coda"
+        android:text="@string/agregar_pokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComenzar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
