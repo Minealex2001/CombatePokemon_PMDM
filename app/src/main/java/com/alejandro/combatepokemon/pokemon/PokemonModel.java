@@ -91,7 +91,7 @@ public class PokemonModel {
                 vidaDespuesAtaque = pokemonDefensa.getHp() - (pokemonAtaque.getAtaqueEspecial() - pokemonDefensa.getDefensaEspecial());
             }
         }else{
-            if (pokemonAtaque.getAtaqueEspecial() > pokemonDefensa.getDefensaEspecial()){
+            if (pokemonAtaque.getAtaque() > pokemonDefensa.getDefensa()){
                 vidaDespuesAtaque = pokemonDefensa.getHp() - (pokemonAtaque.getAtaque() - pokemonDefensa.getDefensa());
             }
         }

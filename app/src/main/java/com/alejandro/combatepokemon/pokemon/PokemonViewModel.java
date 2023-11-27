@@ -21,8 +21,8 @@ public class PokemonViewModel extends AndroidViewModel {
     public MutableLiveData<Integer> errorAtaqueEspecial = new MutableLiveData<>();
     public MutableLiveData<Integer> errorDefensaEspecial = new MutableLiveData<>();
     public MutableLiveData<Boolean> creandoPokemon = new MutableLiveData<>();
-    MutableLiveData<Boolean> batallaTerminada = new MutableLiveData<>();
-    MutableLiveData<Boolean> pokemonAtaca = new MutableLiveData<>();
+    public MutableLiveData<Boolean> batallaTerminada = new MutableLiveData<>();
+    public MutableLiveData<Boolean> pokemonAtaca = new MutableLiveData<>();
 
     PokemonModel pokemonModel;
 

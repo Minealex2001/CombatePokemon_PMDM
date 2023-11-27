@@ -17,6 +17,8 @@ import com.alejandro.combatepokemon.databinding.FragmentAgregarPokemonBinding;
 import com.alejandro.combatepokemon.pokemon.Pokemon;
 import com.alejandro.combatepokemon.pokemon.PokemonViewModel;
 
+import java.util.Objects;
+
 
 public class AgregarPokemon extends Fragment {
 
@@ -28,13 +30,12 @@ public class AgregarPokemon extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agregar_pokemon, container, false);
+        return (binding = FragmentAgregarPokemonBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        NavController navController = NavHostFragment.findNavController(this);
 
         final PokemonViewModel pokemonViewModel = new ViewModelProvider(this).get(PokemonViewModel.class);
 
@@ -44,36 +45,36 @@ public class AgregarPokemon extends Fragment {
 
                 boolean error = false;
 
-                if (binding.nombreInput.getText().toString().isEmpty()) {
+                if (Objects.requireNonNull(binding.nombreInput.getText()).toString().isEmpty()) {
                     binding.nombreInput.setError("El nombre es requerido");
                     error = true;
                 }
                 try {
-                    Integer.parseInt(binding.vidaInput.getText().toString());
+                    Integer.parseInt(Objects.requireNonNull(binding.vidaInput.getText()).toString());
                 } catch (NumberFormatException e) {
                     binding.vidaInput.setError("La vida debe ser un número");
                     error = true;
                 }
                 try{
-                    Integer.parseInt(binding.ataqueInput.getText().toString());
+                    Integer.parseInt(Objects.requireNonNull(binding.ataqueInput.getText()).toString());
                 }catch (Exception e){
                     error = true;
                     binding.ataqueInput.setError("El ataque debe ser un numero");
                 }
                 try {
-                    Integer.parseInt(binding.defensaInput.getText().toString());
+                    Integer.parseInt(Objects.requireNonNull(binding.defensaInput.getText()).toString());
                 }catch (Exception e){
                     error = true;
                     binding.defensaInput.setError("La defensa debe ser un numero");
                 }
                 try{
-                    Integer.parseInt(binding.ataqueEInput.getText().toString());
+                    Integer.parseInt(Objects.requireNonNull(binding.ataqueEInput.getText()).toString());
                 }catch (Exception e){
                     error = true;
                     binding.ataqueEInput.setError("El ataque especial debe ser un numero");
                 }
                 try {
-                    Integer.parseInt(binding.defensaEInput.getText().toString());
+                    Integer.parseInt(Objects.requireNonNull(binding.defensaEInput.getText()).toString());
                 }catch (Exception e){
                     error = true;
                     binding.defensaEInput.setError("La defensa especial debe ser un numero");
@@ -86,16 +87,13 @@ public class AgregarPokemon extends Fragment {
                             Integer.parseInt(binding.ataqueInput.getText().toString()),
                             Integer.parseInt(binding.defensaInput.getText().toString()),
                             Integer.parseInt(binding.ataqueInput.getText().toString()),
-                            Integer.parseInt(binding.defensaEInput.getText().toString())
-                    );
+                            Integer.parseInt(binding.defensaEInput.getText().toString()));
+
+                            limpiarParametros();;
                 }
 
                 pokemonViewModel.errorNombre.observe(getViewLifecycleOwner(), s -> {
-                    if (s != null) {
-                        binding.nombreInput.setError(s);
-                    } else {
-                        binding.nombreInput.setError(null);
-                    }
+                    binding.nombreInput.setError(s);
                 });
 
                 pokemonViewModel.errorVida.observe(getViewLifecycleOwner(), integer -> {

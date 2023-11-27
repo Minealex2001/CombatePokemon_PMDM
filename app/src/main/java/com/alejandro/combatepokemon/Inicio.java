@@ -16,16 +16,19 @@ import com.alejandro.combatepokemon.pokemon.PokemonViewModel;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link Inicio} factory method to
+ * create an instance of this fragment.
+ */
 public class Inicio extends Fragment {
-
     private FragmentInicioBinding binding;
 
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false);
+        return (binding = FragmentInicioBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
