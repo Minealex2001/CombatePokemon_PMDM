@@ -40,6 +40,6 @@ public class Inicio extends Fragment {
 
         binding.agregarPokemon.setOnClickListener(view12 -> navHostFragment.navigate(R.id.agregarPokemon));
 
-        binding.comenzarCombate.setOnClickListener(view1 -> navHostFragment.navigate(R.id.comenzarCombate));
+        binding.comenzarCombate.setOnClickListener(view1 -> navHostFragment.navigate(R.id.combate));
     }
 }

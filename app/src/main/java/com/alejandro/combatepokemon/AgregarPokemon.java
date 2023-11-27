@@ -2,11 +2,9 @@ package com.alejandro.combatepokemon;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,18 +21,17 @@ import java.util.Objects;
 public class AgregarPokemon extends Fragment {
 
     private FragmentAgregarPokemonBinding binding;
-    private Pokemon pokemon;
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return (binding = FragmentAgregarPokemonBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         final PokemonViewModel pokemonViewModel = new ViewModelProvider(this).get(PokemonViewModel.class);
@@ -81,7 +78,7 @@ public class AgregarPokemon extends Fragment {
                 }
 
                 if (!error) {
-                    pokemon = new Pokemon(
+                    pokemonViewModel.agregarPokemon(
                             binding.nombreInput.getText().toString(),
                             Integer.parseInt(binding.vidaInput.getText().toString()),
                             Integer.parseInt(binding.ataqueInput.getText().toString()),
@@ -136,9 +133,9 @@ public class AgregarPokemon extends Fragment {
                     }
                 });
 
-                PokemonViewModel.pokemon1.observe(getViewLifecycleOwner(), pokemon -> Toast.makeText(getContext(), "Pokemon 1 creado", Toast.LENGTH_SHORT).show());
+                PokemonViewModel.pokemon1.observe(getViewLifecycleOwner(), pokemon -> Toast.makeText(getContext(), "Pokemon creado", Toast.LENGTH_SHORT).show());
 
-                PokemonViewModel.pokemon2.observe(getViewLifecycleOwner(), pokemon -> Toast.makeText(getContext(), "Pokemon 2 creado", Toast.LENGTH_SHORT).show());
+                PokemonViewModel.pokemon2.observe(getViewLifecycleOwner(), pokemon -> Toast.makeText(getContext(), "Pokemon creado", Toast.LENGTH_SHORT).show());
 
             }
 
