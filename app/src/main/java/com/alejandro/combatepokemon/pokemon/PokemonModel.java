@@ -38,8 +38,7 @@ public class PokemonModel {
             e.printStackTrace();
         }
 
-        //realizamos las comprobaciones de los parametros
-
+        // Validaciones
         if(!pokemon.getNombre().matches("[a-zA-Z0-9]*")){
             callback.cuandoHayErrorEnElNombre("El nombre solo puede contener letras y numeros.");
             error = true;

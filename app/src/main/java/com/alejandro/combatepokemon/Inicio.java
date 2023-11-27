@@ -35,18 +35,8 @@ public class Inicio extends Fragment {
 
         final PokemonViewModel pokemonViewModel = new ViewModelProvider(this).get(PokemonViewModel.class);
 
-        binding.agregarPokemon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navHostFragment.navigate(R.id.agregarPokemon);
-            }
-        });
+        binding.agregarPokemon.setOnClickListener(view12 -> navHostFragment.navigate(R.id.agregarPokemon));
 
-        binding.comenzarCombate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navHostFragment.navigate(R.id.comenzarCombate);
-            }
-        });
+        binding.comenzarCombate.setOnClickListener(view1 -> navHostFragment.navigate(R.id.comenzarCombate));
     }
 }
